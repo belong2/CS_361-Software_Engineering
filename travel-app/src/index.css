@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #ede9e6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hero-text {
+  position: absolute;
+  color: #383838
+}
+
+@media (max-width: 767px) {
+  .hero-text {
+    top: 16em !important;
+    left: 18em !important;
+  }
+  .hero-details {
+    font-size: 0.75em !important;
+  }
+  .hero-heading {
+    font-size: 1em !important;
+  }
+  .description-text {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-text {
+    top: 23em;
+    left: 22.5em;
+  }
+  .hero-details {
+    font-size: 1em;
+  }
+  .hero-heading {
+    font-size: 1.25em;
+  }
+  .description-text {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-text {
+    top: 30.5em;
+    left: 27.5em;
+  }
+  .hero-details {
+    font-size: 1.5em;
+  }
+  .hero-heading {
+    font-size: 1.75em;
+  }
+  .description-text {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-text {
+    top: 37em;
+    left: 33.5em;
+  }
+  .hero-details {
+    font-size: 1.75em;
+  }
+  .hero-heading {
+    font-size: 2em;
+  }
+  .description-text {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-text {
+    top: 44em;
+    left: 44em;
+  }
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image {
+  opacity: .85
+}
+
+.description-text {
+  color: #464646
+}
+
+.budget-header {
+  text-align: center;
+}
+
+.budget-container {
+  width: 25%;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 20px;
+  border-radius: 8px;
+}
+
+.add-new-row > .add-new-btn {
+  background-color: #c8f0eb;
+}
+
+.add-new-modal {
+  background-color: rgba(244, 244, 244, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
