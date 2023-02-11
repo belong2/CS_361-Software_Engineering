@@ -92,3 +92,15 @@ while True:
         if ending == 10:
             reply = reply[0:-1]
         socket.send(reply)
+
+    """
+    --------------------------------------------------------------------------
+        End code citation:
+        Author: Unknown
+        Website: ZeroMQ
+        Article Title: "Get started"
+        URL: https://zeromq.org/get-started/?language=python&library=pyzmq#
+        Copyright: The ZeroMQ Authors
+        Date: 2022
+    --------------------------------------------------------------------------
+    """

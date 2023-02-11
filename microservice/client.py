@@ -73,3 +73,15 @@ socket.send(bytes(request, "ascii"))
 #  Get the reply.
 message = socket.recv()
 print(f"Received reply {request} [ {message} ]\n\n")
+
+"""
+--------------------------------------------------------------------------
+    End code citation:
+    Author: Unknown
+    Website: ZeroMQ
+    Article Title: "Get started"
+    URL: https://zeromq.org/get-started/?language=python&library=pyzmq#
+    Copyright: The ZeroMQ Authors
+    Date: 2022
+--------------------------------------------------------------------------
+"""
