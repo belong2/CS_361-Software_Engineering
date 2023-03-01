@@ -1,12 +1,20 @@
+import React from 'react';
+import { useState } from 'react';
+
 function Chart() {
+    const imgURL = "BudgetPieChart_output.png";
+
+    let imageObjectURL;
+    fetch(imgURL)
+    .then(response => response.blob())
+    .then(imageBlob => {
+        // Then create a local URL for that image and print it 
+        imageObjectURL = URL.createObjectURL(imageBlob);
+    })
+
     return (
         <div className="overview container budget-container p-4">
-            <form className="bg-white">
-                <fieldset>
-                    <label htmlFor='inputBudget' className="form-label overview-label">My Budget</label>
-                    <input type="number" id="inputBudget" min="500" max="500000" step="500" className="form-control"></input>
-                </fieldset>
-            </form>
+            <img src={imageObjectURL} alt="budget chart" />
         </div>
     )
 }

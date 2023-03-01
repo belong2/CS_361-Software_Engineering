@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Expense from './Expense';
 
-function ExpenseList() {
+function ExpenseList(props) {
     const [expenses, setExpenses] = useState([]);
     const [currKey, setCurrKey] = useState(0);
 
@@ -11,9 +11,21 @@ function ExpenseList() {
     }
 
     function clickHandler() {
-        setExpenses([...expenses, {title: 'Title', type: 'Type', amount: '0.00', key: currKey}]);
+        setExpenses([...expenses, {title: 'Title', type: 'Other', amount: '0.00', key: currKey}]);
         setCurrKey(currKey + 1);
-        console.log(expenses);
+    }
+
+    function updateExpenses(key, title, type, amount) {
+        for (const item of expenses) {
+            if (item.key === key) {
+                item.title = title;
+                item.type = type;
+                item.amount = amount;
+                console.log(item);
+                break;
+            }
+        }
+        props.getExpenses(expenses);
     }
 
     return (
@@ -35,6 +47,8 @@ function ExpenseList() {
                         title={expense.title}
                         type={expense.type}
                         amount={expense.amount}
+                        componentKey={expense.key}
+                        updateExpenses={updateExpenses}
                         key={expense.key} />
                         ))}
 
